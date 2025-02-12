@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorlib</title>
+    <link rel="stylesheet" href="assets/css/navigation.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/properties.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <script src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div class="body">
+      <section>
+        <nav class="navBar">
+            <div class="container">
+                <a href="#" class="nav-brand">
+                  <img src="./assets/images/image.png" alt="logo" />
+                </a>
+                <div class="nav-menu">
+                  <a href="#">Home</a>
+                  <a href="#">Property</a>
+                  <a href="#">About</a>
+                  <a href="#">Blog</a>
+                  <a href="#">Contact</a>
+                </div>
+                <div class="nav-contact">
+                  <span class="phone">Call Us: +10 (78) 356 3276</span>
+                  <a href="#" class="sign-in-btn">Sign In</a>
+                </div>
+            </div>
+        </nav>
+      </section>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+          <div class="container">
+
+              <input type="text" placeholder="Enter Keyword.." />
+              <select class="search-select">
+                <option>Rent</option>
+                <option>Buy</option>
+              </select>
+              <select>
+                <option>Bed</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3+</option>
+              </select>
+              <select>
+                <option>Bath</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3+</option>
+              </select>
+              <button class="search-btn">Search</button>
+          </div>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero">
+        <h1>Light House NY</h1>
+        <p>3 Bed - 2 Bath - 2200 Sq Ft</p>
+        <h2>$ 3,272</h2>
+        <p>
+          Get started by choosing from one of our pre-built page templates to
+          showcase your properties
+        </p>
+        <a href="#" class="view-property-btn">View Property</a>
+      </div>
+
+      <section class="properties">
+        <h2>Display Latest & Featured Properties</h2>
+        <p>
+          Get started by choosing from one of our pre-built page templates to
+          showcase your properties
+        </p>
+
+        <div class="properties-grid" id="propertiesContainer">
+          <!-- Property cards will be loaded dynamically -->
+          <div class="property-card">
+            <div
+              class="property-image"
+              style="background-image: url('./assets/images/house 2.jpg')"
+            ></div>
+            <div class="property-info">
+              <div class="property-price">$ 6,000</div>
+              <h3>Classic Homes</h3>
+              <p>Get started by choosing froom one of our pre-built template</p>
+              <div class="property-details">
+                <span style="align-items: center"
+                  ><i class="material-icons">bed</i> 2 Bedroom</span
+                >
+                <span style="align-items: center"
+                  ><i class="material-icons">bathtub</i> 2 Bathroom</span
+                >
+                <span style="align-items: center"
+                  ><i class="material-icons">apartment</i> 2 Square Feet</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <div
+              class="property-image"
+              style="background-image: url('./assets/images/house1.jpg')"
+            ></div>
+            <div class="property-info">
+              <div class="property-price">$ 6,000</div>
+              <h3>Classic Homes</h3>
+              <p>Get started by choosing froom one of our pre-built template</p>
+              <div class="property-details">
+                <div style="display: flex; align-items: end; gap: 10px">
+                  <i class="material-icons">bed</i>
+                  <span>2 Bedroom</span>
+                </div>
+                <div style="display: flex; align-items: end; gap: 10px">
+                  <i class="material-icons">bathtub</i>
+                  <span>2 Bathroom</span>
+                </div>
+                <div style="display: flex; align-items: end; gap: 10px">
+                  <i class="material-icons">apartment</i>
+                  <span>2 Square Feet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <div
+              class="property-image"
+              style="background-image: url('./assets/images/house3.jpg')"
+            ></div>
+            <div class="property-info">
+              <div class="property-price">$ 6,000</div>
+              <h3>Classic Homes</h3>
+              <p>Get started by choosing froom one of our pre-built template</p>
+              <div class="property-details">
+                <div style="display: flex; align-items: end; gap: 10px">
+                  <i class="material-icons">bed</i>
+                  <span>Bedroom</span>
+                </div>
+                <div style="display: flex; align-items: end; gap: 10px">
+                  <i class="material-icons">bathtub</i>
+                  <span>Bathroom</span>
+                </div>
+                <div style="display: flex; align-items: end; gap: 10px">
+                  <i class="material-icons">apartment</i>
+                  <span>2 Square Feet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navBar{
+  background-color: navy;
+}
+.navBar .container{
+  display: flex;
+  height: 100px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.phone {
+  color: white;
+}
+
+.sign-in-btn {
+  background: #4bb4f8;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}

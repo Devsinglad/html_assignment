@@ -1,0 +1,49 @@
+/* Properties Section */
+.properties {
+    padding: 50px;
+    text-align: center;
+}
+
+.properties h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.property-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.property-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.property-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.property-price {
+    color: #4bb4f8;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.property-details {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    color: #666;
+}
