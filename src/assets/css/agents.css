@@ -1,0 +1,177 @@
+.agents {
+    padding: 20px 30px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agents h2 {
+    font-family: "Jost", sans-serif;
+    font-size: 38px;
+    display: block;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    position: relative;
+    text-align: center;
+}
+
+.agents p {
+    color: #656565;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.agents-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 80%;
+    justify-self: center;
+}
+
+.agent-card {
+    height: 400px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-image {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.agent-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.agent-card h3, 
+.agent-card a {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #192839;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+}
+
+.agent-card p {
+    font-family: "Jost", sans-serif;
+    color: #545454;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin-bottom: 100px;
+}
+
+.social-icons a {
+    color: white;
+    background-color: rgba(14, 7, 222, 0.7);
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.agent-card:hover .social-icons {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .agents-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+    }
+
+    .agents h2 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .agents-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .agents p {
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+    .agent-card {
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .agents {
+        padding: 20px 15px;
+    }
+
+    .agents h2 {
+        font-size: 30px;
+    }
+
+    .agents p {
+        padding: 0 20px;
+    }
+
+    .agents-grid {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .agents-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .agent-card {
+        height: 450px;
+    }
+
+    .agents h2 {
+        font-size: 26px;
+    }
+
+    .social-icons {
+        opacity: 1;
+        margin-bottom: 80px;
+    }
+
+    .agents p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}

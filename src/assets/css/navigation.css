@@ -3,33 +3,48 @@
   margin: 0;
   box-sizing: border-box;
 }
-.navBar{
+.navBar {
   background-color: navy;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
 }
-.navBar .container{
+
+.navBar .container {
   display: flex;
-  height: 100px;
+  height: 80px;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-brand {
   display: flex;
   align-items: center;
-  color: white;
-  text-decoration: none;
-  font-size: 1.3rem;
+}
+
+.nav-brand img {
+  max-height: 40px;
+  width: auto;
 }
 
 .nav-menu {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
-.nav-menu a {
+.nav-link {
   color: white;
   text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4bb4f8;
 }
 
 .nav-contact {
@@ -38,8 +53,14 @@
   gap: 20px;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .phone {
   color: white;
+  font-size: 14px;
 }
 
 .sign-in-btn {
@@ -48,4 +69,79 @@
   padding: 8px 20px;
   border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background: #3a90c7;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .nav-menu {
+    gap: 20px;
+  }
+  
+  .phone {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: navy;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-contact {
+    display: none;
+  }
+
+  .nav-menu .nav-link {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navBar .container {
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  .nav-brand img {
+    max-height: 30px;
+  }
 }

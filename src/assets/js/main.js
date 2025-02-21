@@ -1,54 +1,103 @@
+// main.js
+fetch("./components/header.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("header-placeholder").innerHTML = data;
+  })
+  .catch((error) => console.error("Error loading header:", error));
 
 
-// Sample property data
-const properties = [
-    {
-        imageUrl: 'assets/images/house1.jpg',
-        price: '6728',
-        title: 'Appartment',
-        description: 'Get started by choosing from one of our pre-built page templates to showcase your properties',
-        bedrooms: '2',
-        bathrooms: '2',
-        area: '1050'
-    },
-    {
-        imageUrl: 'assets/images/house 2/.jpg',
-        price: '6728',
-        title: 'Appartment',
-        description: 'Get started by choosing from one of our pre-built page templates to showcase your properties',
-        bedrooms: '2',
-        bathrooms: '2',
-        area: '1050'
-    },
-    {
-        imageUrl: 'assets/images/house3.jpg',
-        price: '6728',
-        title: 'Office',
-        description: 'Get started by choosing from one of our pre-built page templates to showcase your properties',
-        bedrooms: '2',
-        bathrooms: '2',
-        area: '1050'
-    }
-];
+fetch("./components/service.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("service-placeholder").innerHTML = data;
+  })
 
-// Load property cards
-async function loadProperties() {
-    const propertyCardTemplate = await fetch('components/property-card.html')
-        .then(response => response.text());
-    
-    const propertiesContainer = document.getElementById('propertiesContainer');
-    
-    properties.forEach(property => {
-        let propertyCard = propertyCardTemplate;
-        // Replace placeholders with actual data
-        propertyCard = propertyCard.replace('${imageUrl}', property.imageUrl)
-            .replace('${price}', property.price)
-            .replace('${title}', property.title)
-            .replace('${description}', property.description)
-            .replace('${bedrooms}', property.bedrooms)
-            .replace('${bathrooms}', property.bathrooms)
-            .replace('${area}', property.area);
-        
-        propertiesContainer.innerHTML += propertyCard;
+
+  .catch((error) => console.error("Error loading header:", error));
+
+
+
+fetch("./components/explore.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("explore-placeholder").innerHTML = data;
+  })
+  .catch((error) => console.error("Error loading header:", error));
+  
+  fetch("./components/agents.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("agents-placeholder").innerHTML = data;
+  })
+  .catch((error) => console.error("Error loading header:", error));
+  
+  
+  fetch("./components/news_letter.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("news-placeholder").innerHTML = data;
+  })
+  .catch((error) => console.error("Error loading header:", error));
+  
+  
+  fetch("./components/footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  })
+  .catch((error) => console.error("Error loading header:", error));
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) { 
+            // Show button after scrolling 300px
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
     });
-}
+
+    // Scroll to top when button is clicked
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // For smooth scrolling
+        });
+    });
+});
+
+document.querySelectorAll('.option').forEach(option => {
+    option.addEventListener('click', function() {
+      // Remove selected class from all options
+      document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      
+      // Add selected class to clicked option
+      this.classList.add('selected');
+      
+      // Update trigger text
+      const triggerText = this.closest('.custom-select').querySelector('.select-trigger');
+      triggerText.textContent = this.textContent + ' ';
+      
+      // Add arrow back
+      const arrow = document.createElement('span');
+      arrow.className = 'arrow';
+      arrow.innerHTML = '&#9662;';
+      triggerText.appendChild(arrow);
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+  
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      
+      // Optional: Animate hamburger to X
+      this.classList.toggle('active');
+    });
+  });

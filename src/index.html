@@ -7,59 +7,103 @@
     <link rel="stylesheet" href="assets/css/navigation.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/properties.css" />
+    <link rel="stylesheet" href="assets/css/service.css" />
+    <link rel="stylesheet" href="assets/css/explore.css" />
+    <link rel="stylesheet" href="assets/css/agents.css" />
+    <link rel="stylesheet" href="assets/css/news.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
   </head>
   <body>
     <div class="body">
       <section>
-        <nav class="navBar">
-            <div class="container">
-                <a href="#" class="nav-brand">
-                  <img src="./assets/images/image.png" alt="logo" />
-                </a>
-                <div class="nav-menu">
-                  <a href="#">Home</a>
-                  <a href="#">Property</a>
-                  <a href="#">About</a>
-                  <a href="#">Blog</a>
-                  <a href="#">Contact</a>
-                </div>
-                <div class="nav-contact">
-                  <span class="phone">Call Us: +10 (78) 356 3276</span>
-                  <a href="#" class="sign-in-btn">Sign In</a>
-                </div>
-            </div>
-        </nav>
+      <!-- Updated Navigation -->
+<nav class="navBar">
+  <div class="container">
+    <a href="#" class="nav-brand">
+      <img src="./assets/images/image.png" alt="logo" />
+    </a>
+    
+    <!-- Add hamburger menu button -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu items -->
+    <div class="nav-menu" id="navMenu">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Property</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Blog</a>
+      <a href="#" class="nav-link">Contact</a>
+    </div>
+
+    <div class="nav-contact">
+      <div class="contact-info">
+        <span class="phone">Call Us: +10 (78) 356 3276</span>
+      </div>
+      <a href="#" class="sign-in-btn">Sign In</a>
+    </div>
+  </div>
+</nav>
       </section>
 
       <!-- Search Bar -->
       <div class="search-bar">
-          <div class="container">
-
-              <input type="text" placeholder="Enter Keyword.." />
-              <select class="search-select">
-                <option>Rent</option>
-                <option>Buy</option>
-              </select>
-              <select>
-                <option>Bed</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3+</option>
-              </select>
-              <select>
-                <option>Bath</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3+</option>
-              </select>
-              <button class="search-btn">Search</button>
+        <div class="container">
+          <input type="text" placeholder="Enter Keyword.." />
+          <div class="custom-select">
+            <div class="select-trigger">
+              Rent <span class="arrow">&#9662;</span>
+            </div>
+            <div class="dropdown-options">
+              <div class="option selected">Rent</div>
+              <div class="option">Rent 1</div>
+              <div class="option">Rent 2</div>
+              <div class="option">Rent 3</div>
+              <div class="option">Rent 4</div>
+            </div>
           </div>
+          <div class="custom-select">
+            <div class="select-trigger">
+              Bed
+            </div>
+            <div class="dropdown-options">
+              <div class="option selected">Rent</div>
+              <div class="option">Bed 1</div>
+              <div class="option">Bed 2</div>
+              <div class="option">Bed 3</div>
+              <div class="option">Bed 4</div>
+            </div>
+          </div>
+
+
+          <div class="custom-select">
+            <div class="select-trigger">
+              Bath
+            </div>
+            <div class="dropdown-options">
+              <div class="option selected">Rent</div>
+              <div class="option">Bath 1</div>
+              <div class="option">Bath 2</div>
+              <div class="option">Bath 3</div>
+              <div class="option">Bath 4</div>
+            </div>
+          </div>
+
+          <button class="search-btn">Search</button>
+        </div>
       </div>
 
       <!-- Hero Section -->
@@ -91,20 +135,28 @@
             <div class="property-info">
               <div class="property-price">$ 6,000</div>
               <h3>Classic Homes</h3>
-              <p>Get started by choosing froom one of our pre-built template</p>
-              <div class="property-details">
-                <span style="align-items: center"
-                  ><i class="material-icons">bed</i> 2 Bedroom</span
-                >
-                <span style="align-items: center"
-                  ><i class="material-icons">bathtub</i> 2 Bathroom</span
-                >
-                <span style="align-items: center"
-                  ><i class="material-icons">apartment</i> 2 Square Feet</span
-                >
+              <p>
+                Get started by choosing from one of our pre-built page templates
+                to showcase your properties
+              </p>
+            </div>
+            <div class="property-details">
+              <div class="property-icon">
+                <i class="material-icons">bed</i>
+                <span>2 Bedroom</span>
+              </div>
+              <div class="property-icon">
+                <i class="material-icons">bathtub</i>
+                <span>2 Bathroom</span>
+              </div>
+              <div class="property-icon">
+                <i class="material-icons">apartment</i>
+                <span>2 Square Feet</span>
               </div>
             </div>
           </div>
+
+          <!-- card 2 -->
           <div class="property-card">
             <div
               class="property-image"
@@ -112,24 +164,29 @@
             ></div>
             <div class="property-info">
               <div class="property-price">$ 6,000</div>
-              <h3>Classic Homes</h3>
-              <p>Get started by choosing froom one of our pre-built template</p>
-              <div class="property-details">
-                <div style="display: flex; align-items: end; gap: 10px">
-                  <i class="material-icons">bed</i>
-                  <span>2 Bedroom</span>
-                </div>
-                <div style="display: flex; align-items: end; gap: 10px">
-                  <i class="material-icons">bathtub</i>
-                  <span>2 Bathroom</span>
-                </div>
-                <div style="display: flex; align-items: end; gap: 10px">
-                  <i class="material-icons">apartment</i>
-                  <span>2 Square Feet</span>
-                </div>
+              <h3>Nice Homes</h3>
+              <p>
+                Get started by choosing from one of our pre-built page templates
+                to showcase your properties
+              </p>
+            </div>
+            <div class="property-details">
+              <div class="property-icon">
+                <i class="material-icons">bed</i>
+                <span>2 Bedroom</span>
+              </div>
+              <div class="property-icon">
+                <i class="material-icons">bathtub</i>
+                <span>2 Bathroom</span>
+              </div>
+              <div class="property-icon">
+                <i class="material-icons">apartment</i>
+                <span>2 Square Feet</span>
               </div>
             </div>
           </div>
+
+          <!-- card 3 -->
           <div class="property-card">
             <div
               class="property-image"
@@ -137,26 +194,53 @@
             ></div>
             <div class="property-info">
               <div class="property-price">$ 6,000</div>
-              <h3>Classic Homes</h3>
-              <p>Get started by choosing froom one of our pre-built template</p>
-              <div class="property-details">
-                <div style="display: flex; align-items: end; gap: 10px">
-                  <i class="material-icons">bed</i>
-                  <span>Bedroom</span>
-                </div>
-                <div style="display: flex; align-items: end; gap: 10px">
-                  <i class="material-icons">bathtub</i>
-                  <span>Bathroom</span>
-                </div>
-                <div style="display: flex; align-items: end; gap: 10px">
-                  <i class="material-icons">apartment</i>
-                  <span>2 Square Feet</span>
-                </div>
+              <h3>Good Homes</h3>
+
+              <p>
+                Get started by choosing from one of our pre-built page templates
+                to showcase your properties
+              </p>
+            </div>
+            <div class="property-details">
+              <div class="property-icon">
+                <i class="material-icons">bed</i>
+                <span>Bedroom</span>
+              </div>
+              <div class="property-icon">
+                <i class="material-icons">bathtub</i>
+                <span>Bathroom</span>
+              </div>
+              <div class="property-icon">
+                <i class="material-icons">apartment</i>
+                <span>2 Square Feet</span>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section>
+        <div id="service-placeholder"></div>
+      </section>
+
+      <section>
+        <div id="explore-placeholder"></div>
+      </section>
+
+      <section>
+        <div id="agents-placeholder"></div>
+      </section>
+
+      <section>
+        <div id="news-placeholder"></div>
+      </section>
+
+      <section>
+        <div id="footer-placeholder"></div>
+      </section>
+      <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
     </div>
   </body>
 </html>
