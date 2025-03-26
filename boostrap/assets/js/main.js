@@ -6,7 +6,26 @@ fetch("./components/header.html")
   })
   .catch((error) => console.error("Error loading header:", error));
 
-fetch("./components/service.html")
+fetch("./components/search.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("search-placeholder").innerHTML = data;
+  })
+  .catch((error) => console.error("Error loading header:", error));
+  
+  
+  
+  fetch("./components/hero.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("hero-placeholder").innerHTML = data;
+  })
+  .catch((error) => console.error("Error loading header:", error));
+  
+  
+  
+  
+  fetch("./components/service.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("service-placeholder").innerHTML = data;
@@ -40,6 +59,11 @@ fetch("./components/footer.html")
     document.getElementById("footer-placeholder").innerHTML = data;
   })
   .catch((error) => console.error("Error loading header:", error));
+
+
+
+
+  ///
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollToTopBtn = document.getElementById("scrollToTop");

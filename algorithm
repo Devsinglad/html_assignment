@@ -1,0 +1,46 @@
+ALGORITHM AnalyzeSentence
+VAR
+    character: CHAR;
+    length, wordCount, vowelCount: INTEGER;
+    lastCharWasSpace: BOOLEAN;
+BEGIN
+    // Initialize counters
+    length := 0;
+    wordCount := 0;
+    vowelCount := 0;
+    lastCharWasSpace := TRUE; // Initialize to TRUE to count the first word
+
+    // Read characters one by one until encountering a period
+    REPEAT
+        Read(character);
+        length := length + 1;
+        
+        // Check if character is a vowel (case insensitive)
+        IF (character = 'a' OR character = 'A' OR 
+            character = 'e' OR character = 'E' OR 
+            character = 'i' OR character = 'I' OR 
+            character = 'o' OR character = 'O' OR 
+            character = 'u' OR character = 'U') THEN
+            vowelCount := vowelCount + 1;
+        END_IF;
+        
+        // Count words (when we encounter a space after non-space)
+        IF (character = ' ' AND NOT lastCharWasSpace) THEN
+            wordCount := wordCount + 1;
+            lastCharWasSpace := TRUE;
+        ELSE IF (character != ' ') THEN
+            lastCharWasSpace := FALSE;
+        END_IF;
+        
+    UNTIL (character = '.');
+    
+    // Count the last word if the sentence doesn't end with a space
+    IF (NOT lastCharWasSpace AND length > 1) THEN
+        wordCount := wordCount + 1;
+    END_IF;
+    
+    // Output results
+    Write("Length of the sentence: ", length);
+    Write("Number of words: ", wordCount);
+    Write("Number of vowels: ", vowelCount);
+END
